@@ -1,0 +1,4 @@
+.idea
+.vscode
+code/__pycache__/*
+code/__pycache__/capsulelayers.cpython-36.pyc

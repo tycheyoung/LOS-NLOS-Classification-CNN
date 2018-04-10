@@ -1,0 +1,65 @@
+# young@young-MBP.local: ~/DevWorks/PycharmProjects/DL_fromScratch/code                               (10:13:14)
+						 (tensorflow) ζ py3 example.py
+						 Using TensorFlow backend.
+						 /Users/young/tensorflow/lib/python3.6/importlib/_bootstrap.py:205: RuntimeWarning: compiletime version 3.5 of module 'tensorflow.python.framework.fast_tensor_util' does not match runtime version 3.6
+						   return f(*args, **kwds)
+	2017-11-11 10:13:28.198647: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+	../dataset/uwb_dataset_part1.csv
+	../dataset/uwb_dataset_part2.csv
+	../dataset/uwb_dataset_part3.csv
+	../dataset/uwb_dataset_part4.csv
+	../dataset/uwb_dataset_part5.csv
+	../dataset/uwb_dataset_part6.csv
+	../dataset/uwb_dataset_part7.csv
+	_________________________________________________________________
+	Layer (type)                 Output Shape              Param #
+	=================================================================
+	embedding_1 (Embedding)      (None, 1016, 1024)        2764800
+	_________________________________________________________________
+	conv1d_1 (Conv1D)            (None, 1013, 10)          40970
+	_________________________________________________________________
+	conv1d_2 (Conv1D)            (None, 1009, 20)          1020
+	_________________________________________________________________
+	max_pooling1d_1 (MaxPooling1 (None, 504, 20)           0
+			_________________________________________________________________
+			conv1d_3 (Conv1D)            (None, 501, 20)           1620
+			_________________________________________________________________
+			conv1d_4 (Conv1D)            (None, 498, 40)           3240
+			_________________________________________________________________
+			global_max_pooling1d_1 (Glob (None, 40)                0
+				_________________________________________________________________
+				dense_1 (Dense)              (None, 128)               5248
+				_________________________________________________________________
+				dropout_1 (Dropout)          (None, 128)               0
+				_________________________________________________________________
+				dense_2 (Dense)              (None, 1)                 129
+				=================================================================
+				Total params: 2,817,027
+				Trainable params: 2,817,027
+				Non-trainable params: 0
+				_________________________________________________________________
+				None
+				Train on 25000 samples, validate on 5000 samples
+				Epoch 1/10
+				25000/25000 [==============================] - 502s 20ms/step - loss: 0.4856 - acc: 0.7580 - val_loss: 0.4214 - val_acc: 0.7988
+				Epoch 2/10
+				25000/25000 [==============================] - 516s 21ms/step - loss: 0.4311 - acc: 0.8037 - val_loss: 0.4087 - val_acc: 0.8154
+				Epoch 3/10
+				25000/25000 [==============================] - 726s 29ms/step - loss: 0.4231 - acc: 0.8057 - val_loss: 0.4136 - val_acc: 0.8086
+				Epoch 4/10
+			25000/25000 [==============================] - 512s 20ms/step - loss: 0.4193 - acc: 0.8119 - val_loss: 0.4060 - val_acc: 0.8150
+			Epoch 5/10
+			25000/25000 [==============================] - 504s 20ms/step - loss: 0.4145 - acc: 0.8119 - val_loss: 0.4057 - val_acc: 0.8208
+			Epoch 6/10
+			25000/25000 [==============================] - 537s 21ms/step - loss: 0.4111 - acc: 0.8138 - val_loss: 0.4100 - val_acc: 0.8170
+			Epoch 7/10
+			25000/25000 [==============================] - 609s 24ms/step - loss: 0.4079 - acc: 0.8168 - val_loss: 0.4038 - val_acc: 0.8182
+			Epoch 8/10
+			25000/25000 [==============================] - 510s 20ms/step - loss: 0.4057 - acc: 0.8164 - val_loss: 0.4114 - val_acc: 0.8168
+			Epoch 9/10
+			25000/25000 [==============================] - 530s 21ms/step - loss: 0.4014 - acc: 0.8188 - val_loss: 0.4031 - val_acc: 0.8184
+			Epoch 10/10
+			25000/25000 [==============================] - 514s 21ms/step - loss: 0.3987 - acc: 0.8213 - val_loss: 0.4031 - val_acc: 0.8184
+			12000/12000 [==============================] - 79s 7ms/step
+## evaluation loss and_metrics ##
+			[0.40842301026980082, 0.81425000000000003]
